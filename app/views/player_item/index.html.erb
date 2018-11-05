@@ -1,0 +1,13 @@
+<h1>Item listing</h1>
+
+<div>
+  <% @list.each do |item| %>
+  <li>Id: <%= item.id %>
+  <li>Name: <strong><%= item.name %></li></strong>
+  <li>Power: <%= item.power %></li>
+  <li>Damage Type: <%= item.damage_type %></li>
+  <li>Element Type: <%= item.element_type %></li>
+  <li>Item Type: <%= item.item_type %></li><br>
+  <strong><%= link_to "Destroy", destroy_item_path(item.id), :method => :delete %></strong>
+  <% end %>
+</div>
