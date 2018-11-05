@@ -7,6 +7,7 @@ class PlayerItemController < ApplicationController
   def destroy
     @item = PlayerItem.find(params[:id])
     @item.destroy
+    @list = PlayerItem.all
     render 'index'
   end
 end

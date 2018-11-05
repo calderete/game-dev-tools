@@ -17,3 +17,27 @@ PlayerItem.create(
   element_type: "kinetic",
   item_type: "specialAbility"
 )
+
+PlayerItem.create(
+  name: "leather knux",
+  power: 10,
+  defense: 0,
+  damage_type_id: 1,
+  element_type_id: 1,
+  item_type_id: 2,
+  damage_type: "instant",
+  element_type: "kinetic",
+  item_type: "meleeAbility"
+)
+
+PlayerItem.create(
+  name: "trinity",
+  power: 10,
+  defense: 0,
+  damage_type_id: 1,
+  element_type_id: 1,
+  item_type_id: 2,
+  damage_type: "instant",
+  element_type: "kinetic",
+  item_type: "powerAbility"
+)
