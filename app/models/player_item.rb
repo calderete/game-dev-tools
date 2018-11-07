@@ -1,6 +1,6 @@
 class PlayerItem < ApplicationRecord
   @damage_types = {1 => "instant", 2 => "aoe"}
-  @item_types = {1 => "melee", 2 => "special_ability", 3 => "power_ability"}
+  @item_types = {1 => "meleeAbility", 2 => "specialAbility", 3 => "powerAbility"}
   @element_types = {1 => "kinetic"}
 
   def self.create_item(form_data)
