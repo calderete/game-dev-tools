@@ -1,11 +1,28 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+---
+creame_blade:
+  name: "cream blade"
+  power: 4
+  defense: 0,
+  damage_type_id: 1
+  damage_type: "instant"
+  element_type_id: 1
+  element_type: "kenitic"
+  item_type_id: 2
+  item_type: "specialAbility"
+  description: "A blade for butter"
+  lore: "Not much to it really. It spreads butter."
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+leather_knux:
+  name: "leather knux"
+  power: 10
+  defense: 0
+  damage_type_id: 1
+  damage_type: "instant"
+  element_type_id: 1
+  element_type: "kenitic"
+  item_type_id: 1
+  item_type: "meleeAbility"
+  description: "Fine leather goods"
+  lore: "Leather and blood"
+  
