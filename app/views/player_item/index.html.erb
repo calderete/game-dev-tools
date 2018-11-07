@@ -1,13 +1,17 @@
 <h1>Item listing</h1>
+<div id='add_button'><strong><%= button_to "Add Item", add_item_path, method: :get %></strong>
 
 <div>
   <% @list.each do |item| %>
-  <li>Id: <%= item.id %>
+  <li>Id: <%= item.id %></li>
   <li>Name: <strong><%= item.name %></li></strong>
   <li>Power: <%= item.power %></li>
   <li>Damage Type: <%= item.damage_type %></li>
   <li>Element Type: <%= item.element_type %></li>
-  <li>Item Type: <%= item.item_type %></li><br>
-  <strong><%= link_to "Destroy #{item.name}", destroy_item_path(item.id), :method => :delete %></strong>
+  <li>Item Type: <%= item.item_type %></li></br>
+  <li>Description: <%= item.description %></li>
+  <li>Lore: <%= item.lore %></li>
+  <li><strong><%= link_to "Destroy #{item.name}", destroy_item_path(item.id), :method => :delete %></strong></li>
+  <br>
   <% end %>
-</div><br>
+</div>

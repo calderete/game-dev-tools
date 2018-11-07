@@ -15,7 +15,9 @@ PlayerItem.create(
   item_type_id: 2,
   damage_type: "instant",
   element_type: "kinetic",
-  item_type: "specialAbility"
+  item_type: "specialAbility",
+  description: "Good for spreading?",
+  lore: "I'm not sure what to put here"
 )
 
 PlayerItem.create(
@@ -27,7 +29,9 @@ PlayerItem.create(
   item_type_id: 2,
   damage_type: "instant",
   element_type: "kinetic",
-  item_type: "meleeAbility"
+  item_type: "meleeAbility",
+  description: "Good for punching",
+  lore: "Just keep swinging"
 )
 
 PlayerItem.create(
@@ -39,5 +43,7 @@ PlayerItem.create(
   item_type_id: 2,
   damage_type: "instant",
   element_type: "kinetic",
-  item_type: "powerAbility"
+  item_type: "powerAbility",
+  description: "No worries",
+  lore: "The blast is the least of your problems :)"
 )
