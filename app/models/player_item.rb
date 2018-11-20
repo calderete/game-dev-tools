@@ -1,4 +1,15 @@
 class PlayerItem < ApplicationRecord
+  validates :name, presence: true
+  validates :power, presence: true
+  validates :damage_type_id, presence: true
+  validates :element_type_id, presence: true
+  validates :item_type_id, presence: true
+
+  validates :damage_type_id, format: { with: /[1-2]/, message: "Id 1(instant), and 2(aoe) are allowed" }
+  validates :element_type_id, format: { with: /[1]/, message: "Id 1(kinetic) is allowed" }
+  validates :item_type_id, format: { with: /[1-3]/, message: "Id 1(meleeAbility), 2(specialAbility), and 3(powerAbility) are allowed" }
+
+
   @damage_types = {1 => "instant", 2 => "aoe"}
   @item_types = {1 => "meleeAbility", 2 => "specialAbility", 3 => "powerAbility"}
   @element_types = {1 => "kinetic"}
@@ -17,11 +28,7 @@ class PlayerItem < ApplicationRecord
       item_type_id: form_data[:item_type_id],
       item_type: item_type,
       description: form_data[:description]
-    )
-
+      )
   end
 
-  def self.set_types(form_data)
-
-  end
 end

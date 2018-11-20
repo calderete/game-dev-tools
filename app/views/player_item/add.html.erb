@@ -1,4 +1,5 @@
-<hi>Add Item</h1>
+<h1>Add Item</h1>
+  <div class='add-item'>
   <%= form_tag(save_item_path) do %>
     <%= label_tag "Name" %><br>
     <%= text_field_tag :name %><br>
@@ -7,20 +8,15 @@
 
     <%= label_tag "Damage Type Id" %><br>
     <%= text_field_tag :damage_type_id %><br>
-    <%= label_tag "Damage Type" %><br>
-    <%= text_field_tag :damage_type %><br>
 
     <%= label_tag "Element Type Id" %><br>
     <%= text_field_tag :element_type_id %><br>
-    <%= label_tag "Element Type" %><br>
-    <%= text_field_tag :element_type %><br>
 
     <%= label_tag "Item Type Id" %><br>
     <%= text_field_tag :item_type_id %><br>
-    <%= label_tag "Item Type" %><br>
-    <%= text_field_tag :item_type %><br>
 
     <%= label_tag("Description") %><br>
     <%= text_area_tag(:description) %><br>
     <%= submit_tag "Add Item" %>
   <% end %>
+  </div>

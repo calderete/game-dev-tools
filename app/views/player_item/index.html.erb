@@ -1,17 +1,23 @@
 <h1>Item listing</h1>
-<div id='add_button'><strong><%= button_to "Add Item", add_item_path, method: :get %></strong>
-
-<div>
+<div class='nav_buttons'>
+  <div id='add_button'><strong><%= button_to "Add Item", add_item_path, method: :get %></strong>
+  </div>
+  <div id='anagram_button'><%= button_to "Anagram Helper", anagram_helper_path, method: :get %>
+  </div>
+</div>
+<br>
   <% @list.each do |item| %>
-  <li>Id: <%= item.id %></li>
-  <li>Name: <strong><%= item.name %></li></strong>
-  <li>Power: <%= item.power %></li>
-  <li>Damage Type: <%= item.damage_type %></li>
-  <li>Element Type: <%= item.element_type %></li>
-  <li>Item Type: <%= item.item_type %></li></br>
-  <li>Description: <%= item.description %></li>
-  <li>Lore: <%= item.lore %></li>
+  <span class='player-item'>
+  <li><span class='item-label'>Id:</span> <%= item.id %></li>
+  <li><span class='item-label'>Name:</span> <strong><%= item.name %></li></strong>
+  <li><span class='item-label'>Power:</span> <%= item.power %></li>
+  <li><span class='item-label'>Damage Type:</span> <%= item.damage_type %></li>
+  <li><span class='item-label'>Element Type:</span> <%= item.element_type %></li>
+  <li><span class='item-label'>Item Type:</span> <%= item.item_type %></li></br>
+  <li><span class='item-label'>Description:</span> <%= item.description %></li>
+  <li><span class='item-label'>Lore:</span> <%= item.lore %></li>
   <li><strong><%= link_to "Destroy #{item.name}", destroy_item_path(item.id), :method => :delete %></strong></li>
   <br>
+</span>
   <% end %>
 </div>
